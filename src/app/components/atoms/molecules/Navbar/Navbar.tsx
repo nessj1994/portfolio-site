@@ -8,7 +8,7 @@ const navItems = [
   {
     id: 0,
     label: 'About',
-    href: '',
+    href: '#',
   },
   {
     id: 1,
