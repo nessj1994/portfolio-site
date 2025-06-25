@@ -24,9 +24,9 @@ const monteserrat = Montserrat({
 //   subsets: ['latin'],
 // });
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faBluesky, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faGithub);
+library.add(faGithub, faBluesky, faLinkedin);
 
 export const metadata: Metadata = {
   title: '<Jordan Ness>',

@@ -24,7 +24,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row justify-center items-center h-12 ">
+    <div className="flex flex-row justify-center items-center h-14 w-[94%] border-b-1">
       {navItems.map((item) => (
         <NavItem
           key={item.id}

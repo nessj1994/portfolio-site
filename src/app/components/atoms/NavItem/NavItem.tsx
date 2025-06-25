@@ -14,7 +14,7 @@ const NavItem = (props: NavItemProps) => {
     <div className="flex flex-row gap-0.5 items-center hover:color-gray-300 ">
       {icon && <FontAwesomeIcon icon={icon} className="size-6" />}
       <a
-        className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+        className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-md font-medium"
         href={href}
       >
         {label}
