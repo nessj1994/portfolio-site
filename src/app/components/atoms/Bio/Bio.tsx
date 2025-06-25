@@ -2,7 +2,7 @@ import TH from '../TextHighlight/TextHighlight';
 
 const Bio = () => {
   return (
-    <div className="text-md text-wrap max-w-lg">
+    <div className="text-md text-wrap max-w-4xl">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque{' '}
       <TH color="text-amber-500" size="text-lg">
         lobortis

@@ -15,9 +15,9 @@ const SocialLink = (props: SocialLinkProps) => {
     const {id, siteID, url = '', icon} = props;
     const trueURL = url ? url : process.env[`NEXT_PUBLIC_${siteID.toUpperCase()}_URL`]
     return (
-        <div className="">
+        <div className="flex items-center min-h-[98px]">
             <a href={trueURL}>
-                <FontAwesomeIcon icon={icon} size="2x"  className="text-white`" href={trueURL} />
+                <FontAwesomeIcon icon={icon}   className="text-4xl  hover:text-amber-500" href={trueURL} />
             </a>
         </div>
     )

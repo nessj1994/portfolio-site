@@ -12,26 +12,22 @@ const bskyIcon: IconProp = 'fa-brands fa-bluesky';
 export default function Home() {
   return (
     <div className="bg-cyan-700 min-h-screen scroll-mt-5">
-      <div className="flex flex-row justify-center items-center h-12 backdrop-blur-md sticky top-0 z-10">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="m-8 flex flex-col min-h-full gap-24 ">
-        <div className="flex gap-4 justify-center items-center flex-col min-h-screen">
+        <div className="flex gap-4 flex-col min-h-screen">
           <div className="flex flex-col justify-start align-start">
-
-          <NameDisplay />
-          <Bio />
-          </div>
-          <div className="">
+            <NameDisplay />
+            <Bio />
             <SocialPanel />
           </div>
+
         </div>
         <div id="projects" className="flex flex-col  min-h-screen scroll-mt-14">
           <span>Projects</span>
           <div className="m-4 flex flex-row flex-wrap gap-4 justify-center items-center">
             {[0, 1, 2, 3, 4].map((item, idx) => (
               // eslint-disable-next-line react/jsx-key
-              <ProjectItem key={`project-${idx}`}/>
+              <ProjectItem key={`project-${idx}`} />
             ))}
           </div>
         </div>
