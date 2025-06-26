@@ -48,7 +48,7 @@ export default function Home() {
               <SocialPanel />
             </div>
           </div>
-          <div className=" flex flex-col items-center gap-4 ">
+          <div className=" flex flex-col items-center gap-4 mb-8 md:mb-0">
             <Bio />
           </div>
         </div>
