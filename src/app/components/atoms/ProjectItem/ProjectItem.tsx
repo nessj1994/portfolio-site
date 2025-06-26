@@ -27,7 +27,7 @@ const ProjectItem = (props: ProjectItemProps) => {
   console.log(`Project Item ${title} with size ${size}`);
   return (
     <div
-      className={`relative flex flex-col h-48 ${sizes[size]} bg-gray-500 rounded-lg shadow-md `}
+      className={` flex flex-col h-48 ${sizes[size]} bg-gray-500 rounded-lg shadow-md `}
     >
       <h2 className="text-xl font-semibold">{props.title}</h2>
     </div>

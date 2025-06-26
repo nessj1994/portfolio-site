@@ -4,14 +4,22 @@ const ProjectDisplay = () => {
   const COLUMN_COUNT = 5;
 
   let currentCol = 0;
+  let currentRow = 0;
 
   return (
     <div className="grid grid-cols-5 gap-4">
       {[0, 1, 2, 3, 4].map((item, i) => {
-        const span = i % 2 === 0 ? 3 : 2; // Alternate between spans of 2 and 1
+        const isEvenRow = currentRow % 2 === 0;
+        const span = isEvenRow ? (i % 2 === 0 ? 3 : 2) : i % 2 === 0 ? 2 : 3;
         const isLast = i === 5 - 1;
 
         let colSpan = span;
+
+        // If the span would overflow this row, wrap to the next
+        if (currentCol + colSpan >= COLUMN_COUNT) {
+          currentRow++;
+          currentCol = 0;
+        }
 
         if (isLast && currentCol + span < COLUMN_COUNT) {
           // Fill the rest of the row
