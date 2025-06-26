@@ -1,5 +1,6 @@
-@import "@fortawesome/fontawesome-svg-core/styles.css" layer(vendor); /* make sure it's imported before tailwind */
+@import '@fortawesome/fontawesome-svg-core/styles.css' layer(vendor); /* make sure it's imported before tailwind */
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 :root {
   --background: #ffffff;

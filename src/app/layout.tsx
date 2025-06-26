@@ -1,6 +1,15 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Lato, Montserrat } from 'next/font/google';
 import './globals.css';
+import { Lato, Montserrat } from 'next/font/google';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faGithub,
+  faBluesky,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faGithub, faBluesky, faLinkedin, faEnvelope);
 
 const lato = Lato({
   subsets: ['latin'],
@@ -13,20 +22,6 @@ const monteserrat = Montserrat({
   weight: ['400', '700'], // Specify the weights you need
   variable: '--font-montserrat', // Define a CSS variable name
 });
-
-// const geistSans = Geist({
-//   variable: '--font-geist-sans',
-//   subsets: ['latin'],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: '--font-geist-mono',
-//   subsets: ['latin'],
-// });
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGithub, faBluesky, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
-library.add(faGithub, faBluesky, faLinkedin);
 
 export const metadata: Metadata = {
   title: '<Jordan Ness>',

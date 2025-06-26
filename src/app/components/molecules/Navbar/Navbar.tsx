@@ -1,4 +1,4 @@
-import NavItem from '../../NavItem/NavItem';
+import NavItem from '../../atoms/NavItem/NavItem';
 
 // @ts-expect-error FontAwesomeIcon has a know typescript error
 const ghIcon: IconProp = 'fa-brands fa-github';
@@ -24,8 +24,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-
-    <div className="flex flex-row justify-center m-auto items-center h-14 w-[94%] backdrop-blur-md sticky top-0 z-10 border-b">
+    <div className="flex flex-row justify-center m-auto items-center h-14  backdrop-blur-md sticky top-0 z-10 ">
       {navItems.map((item) => (
         <NavItem
           key={item.id}

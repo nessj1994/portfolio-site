@@ -1,26 +1,32 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// File Description: Display a social link with an icon and URL
 
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
-type SocialIdentifier = "Discord" | "BSky" | "LinkedIn" | "GitHub"; 
+type SocialIdentifier = 'Discord' | 'BSky' | 'LinkedIn' | 'GitHub';
 
 type SocialLinkProps = {
-    id: number,
-    siteID: SocialIdentifier,
-    url?: string
-    icon: IconProp
-}
+  id: number;
+  socialID: SocialIdentifier;
+  url?: string;
+  icon: IconProp;
+};
 const SocialLink = (props: SocialLinkProps) => {
-    const {id, siteID, url = '', icon} = props;
-    const trueURL = url ? url : process.env[`NEXT_PUBLIC_${siteID.toUpperCase()}_URL`]
-    return (
-        <div className="flex items-center min-h-[98px]">
-            <a href={trueURL}>
-                <FontAwesomeIcon icon={icon}   className="text-4xl  hover:text-amber-500" href={trueURL} />
-            </a>
-        </div>
-    )
-}
+  const { id, socialID, url = '', icon } = props;
+  const trueURL = url
+    ? url
+    : process.env[`NEXT_PUBLIC_${socialID.toUpperCase()}_URL`];
+  return (
+    <div className="flex items-center min-h-[98px]">
+      <a href={trueURL}>
+        <FontAwesomeIcon
+          icon={icon}
+          className="text-4xl  hover:text-amber-500"
+          href={trueURL}
+        />
+      </a>
+    </div>
+  );
+};
 
 export default SocialLink;
