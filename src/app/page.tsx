@@ -17,11 +17,11 @@ export default function Home() {
       <div className="flex flex-col min-h-full">
         <div
           id="about-container"
-          className="flex md:flex-row flex-col min-h-screen justify-center md:justify-evenly mx-8 md:gap-32 items-center"
+          className="flex md:flex-row flex-col h-screen justify-center md:justify-evenly mx-8 md:gap-32 items-center"
         >
           <div
             id="profile"
-            className="flex flex-col h-full justify-between items-center gap-4 "
+            className="flex flex-col h-full justify-center items-center gap-4 "
           >
             <div className="justify-center flex flex-1 flex-col items-start gap-4">
               <div>
@@ -43,12 +43,12 @@ export default function Home() {
             </div>
             <div
               id="social-container"
-              className="flex justify-end mb-12 items-end"
+              className="flex justify-end mb-20 items-end"
             >
               <SocialPanel />
             </div>
           </div>
-          <div className=" flex flex-col  items-center gap-4 ">
+          <div className=" flex flex-col items-center gap-4 ">
             <Bio />
           </div>
         </div>
