@@ -17,11 +17,11 @@ const SocialLink = (props: SocialLinkProps) => {
     ? url
     : process.env[`NEXT_PUBLIC_${socialID.toUpperCase()}_URL`];
   return (
-    <div className="flex items-center min-h-[98px]">
+    <div className="flex items-center min-h-[32px]">
       <a href={trueURL}>
         <FontAwesomeIcon
           icon={icon}
-          className="text-4xl  hover:text-amber-500"
+          className="text-3xl  hover:text-amber-500"
           href={trueURL}
         />
       </a>

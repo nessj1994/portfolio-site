@@ -8,6 +8,7 @@ import SocialPanel from './components/molecules/SocialPanel/SocialPanel';
 import TitleDisplay from './components/atoms/TitleDisplay/TitleDisplay';
 import CursorFollower from './components/atoms/CursorFollower/CursorFollower';
 import ProjectDisplay from './components/molecules/ProjectDisplay/ProjectDisplay';
+import ResumeButton from './components/atoms/ResumeButton/ResumeButton';
 
 export default function Home() {
   return (
@@ -17,42 +18,48 @@ export default function Home() {
       <div className="flex flex-col min-h-full">
         <div
           id="about-container"
-          className="flex md:flex-row flex-col h-screen justify-center md:justify-evenly mx-8 md:gap-32 items-center"
+          className="flex flex-col md:flex-row h-screen justify-center md:justify-evenly mx-8 gap-32 items-center"
         >
           <div
             id="profile"
-            className="flex flex-col h-full justify-center items-center gap-4 "
+            className="flex flex-col md:h-full items-center min-w-72 "
           >
-            <div className="justify-center flex flex-1 flex-col items-start gap-4">
+            <div className="justify-center flex flex-1 flex-col items-start gap-8">
               <div>
                 <NameDisplay />
                 <TitleDisplay title={'Software Engineer'} />
               </div>
+                <span className="text-wrap max-w-md">
+                  A full stack engineer with a passion for bringing ideas to life on screen with clean scalable code
+                </span>
               <div
-                id="profile-container"
-                className="mb-0 rounded-full hidden  md:flex flex-col bg-gray-400"
+                id="avatar-container"
+                className="justify-center hidden md:flex flex-col mx-auto "
               >
                 <Image
-                  src="/images/jordan-ness.jpg"
+                  src="/images/avatar.jpg"
                   alt="Jordan Ness"
-                  className="rounded-lg shadow-md "
-                  width={300}
-                  height={300}
+                  sizes='auto'
+                  className="rounded-full shadow-md hidden md:flex"
+                  width={400}
+                  height={400}
                 />
               </div>
-            </div>
             <div
               id="social-container"
-              className="flex justify-end mb-20 items-end"
+              className="w-full mt-16 "
             >
               <SocialPanel />
             </div>
+            </div>
           </div>
-          <div className=" flex flex-col items-center gap-4 mb-8 md:mb-0">
-            <Bio />
+          <div className="flex flex-col">
+
+          <Bio />
+          <ResumeButton />
           </div>
         </div>
-        <div id="projects" className="flex flex-col min-h-screen bg-white">
+        <div id="projects" className="flex flex-col min-h-screen bg-gray-800">
           <div className="mt-14 mx-4 flex flex-col gap-10">
             <span className="text-black text-5xl font-bold">Projects</span>
             <ProjectDisplay />
