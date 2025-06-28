@@ -1,9 +1,9 @@
 // File Description: Display a social link with an icon and URL
-
+"use client"; // Necessary for env var href building
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-type SocialIdentifier = 'Discord' | 'BSky' | 'LinkedIn' | 'GitHub';
+type SocialIdentifier = 'Discord' | 'BSky' | 'LinkedIn' | 'GitHub' | 'Email';
 
 type SocialLinkProps = {
   id: number;
