@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next';
 import './globals.css';
 import { Lato, Montserrat } from 'next/font/google';
@@ -41,6 +42,7 @@ export default function RootLayout({
         className={`${monteserrat.className} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
