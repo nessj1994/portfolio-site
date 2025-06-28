@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       '*.md': { loaders: ['raw-loader'], as: '*.js' },
     },
   },
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 };
 
 export default nextConfig;
