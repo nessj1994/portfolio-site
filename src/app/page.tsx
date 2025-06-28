@@ -29,9 +29,10 @@ export default function Home() {
                 <NameDisplay />
                 <TitleDisplay title={'Software Engineer'} />
               </div>
-                <span className="text-wrap max-w-md">
-                  A full stack engineer with a passion for bringing ideas to life on screen with clean scalable code
-                </span>
+              <span className="text-wrap max-w-md">
+                A full stack engineer with a passion for bringing ideas to life
+                on screen with clean scalable code
+              </span>
               <div
                 id="avatar-container"
                 className="justify-center hidden md:flex flex-col mx-auto "
@@ -39,34 +40,33 @@ export default function Home() {
                 <Image
                   src="/images/avatar.jpg"
                   alt="Jordan Ness"
-                  sizes='auto'
+                  sizes="auto"
                   className="rounded-full shadow-md hidden md:flex"
                   width={400}
                   height={400}
                 />
               </div>
-            <div
-              id="social-container"
-              className="w-full mt-16 "
-            >
-              <SocialPanel />
-            </div>
+              <div id="social-container" className="w-full mt-16 ">
+                <SocialPanel />
+              </div>
             </div>
           </div>
           <div className="flex flex-col">
-
-          <Bio />
-          <ResumeButton />
+            <Bio />
+            <ResumeButton />
           </div>
         </div>
-        <div id="projects" className="flex flex-col min-h-screen bg-gray-800">
-          <div className="mt-14 mx-4 flex flex-col gap-10">
-            <span className="text-black text-5xl font-bold">Projects</span>
+        <div id="projects" className="relative flex flex-col min-h-screen">
+          <div className="absolute inset-0 flex-1  min-h-screen bg-gray-950 opacity-60 z-1" />
+          <div className="relative mt-14 mx-8 flex flex-col gap-10 z-2">
+            <span className="text-white text-5xl font-bold">Projects</span>
             <ProjectDisplay />
           </div>
         </div>
         <div id="contact" className="flex flex-col min-h-screen ">
-          <div className="mt-14">Contact</div>
+          <div className="relative mt-14 mx-8 flex flex-col gap-10 z-2">
+            <span className="text-white text-5xl font-bold">Contact</span>
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 # About Me
 
-From as early as I can remember, I’ve been passionate about computers, gaming, and solving problems. As a kid, I always said, “I want to make games someday.” That passion naturally led me to programming. I attended a vocational high school to start pursuing that dream and later earned a Bachelor's degree in Game Development from Full Sail University.
+I have over six years of professional experience as a developer. There is nothing more fulfilling to me than seeing my code bring ideas to life on a screen. I let that passion drive me forward in my pursuit to continually learn and improve as a software engineer.
 
-While I don't work directly in the games industry, I’ve still accomplished that childhood goal — I now work as a **Full Stack Software Engineer** with over six years of professional experience. In my spare time, I still dabble in game development through small side projects whenever I can.
+Over the course of my education and professional career I have worked on apps for both the desktop and web. In my current role at Litania Sports Group I primarily work with **React**, **Typescript**, and **Python**. I am responsible for both frontend applications and our custom **REST API**. Both our internal staff and dealer network use these tools in processes ranging from manufacturing our products to quoting custom gymnasiums for customers.
 
-I strive to continually improve, and over the course of my education and career, I’ve picked up a wide range of languages, frameworks, and tools. C++ will always have a special place in my heart, but in my day-to-day work, I'm usually deep in **React, TypeScript, and Python**.
+Though I work mostly on web based apps at my job, my love of coding started with game development in **C++** and **C#**. When I have spare time I like to dabble with game project ideas in **Unreal Engine** or **Unity** for fun.

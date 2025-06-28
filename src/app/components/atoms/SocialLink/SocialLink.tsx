@@ -21,7 +21,7 @@ const SocialLink = (props: SocialLinkProps) => {
       <a href={trueURL}>
         <FontAwesomeIcon
           icon={icon}
-          className="text-3xl  hover:text-amber-500"
+          className="text-3xl  hover:text-highlight-200"
           href={trueURL}
         />
       </a>
