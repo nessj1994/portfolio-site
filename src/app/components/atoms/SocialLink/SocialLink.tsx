@@ -1,5 +1,5 @@
 // File Description: Display a social link with an icon and URL
-"use client"; // Necessary for env var href building
+
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -15,7 +15,7 @@ const SocialLink = (props: SocialLinkProps) => {
   const { id, socialID, url = '', icon } = props;
   const trueURL = url
     ? url
-    : process.env[`NEXT_PUBLIC_${socialID.toUpperCase()}_URL`];
+    : process.env[`${socialID.toUpperCase()}_URL`];
   return (
     <div className="flex items-center min-h-[32px]">
       <a href={trueURL}>
