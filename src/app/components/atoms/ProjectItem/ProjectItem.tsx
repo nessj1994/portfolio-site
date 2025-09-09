@@ -1,48 +1,26 @@
 import SkillTag from '../SkillTag/SkillTag';
+import { Project } from './projects';
 
-export type Tag = "JavaScript" | "TypeScript" | "React" | "NextJS" | "Python" | "Django" | "Docker" | "MS SQL" | "C++" | "C#" | "Unity" | "Unreal Engine"
+const ProjectItem = (props: Project) => {
+  const { title, description, image, link, tags } = props;
 
-export interface ProjectItemProps {
-  title: string;
-  description?: string;
-  image?: string;
-  link?: string;
-  tags?: Tag[];
-  size: number;
-}
-
-const ProjectItem = (props: ProjectItemProps) => {
-  const { title, description, image, link, tags, size } = props;
-
-  const sizes = [
-    'col-span-1',
-    'col-span-2',
-    'col-span-3',
-    'col-span-4',
-    'col-span-5',
-    'col-span-6',
-    'col-span-7',
-    'col-span-8',
-    'col-span-9',
-    'col-span-10',
-    'col-span-11',
-    'col-span-12',
-  ];
-  console.log(`Project Item ${title} with size ${size}`);
   return (
-    <div
-      className={`flex flex-col h-64 ${sizes[size]} bg-gray-800 rounded-lg shadow-sm p-4 justify-between shadow-gray-600 hover:bg-gray-700`}
-    >
-      <div>
-        <h2 className="text-xl font-semibold">{props.title}</h2>
-        <p>{props.description}</p>
+    <li className="mb-8">
+      <div
+        className={`group relative grid transition-all justify-between max-w-full grow hover:!opacity-100 group-hover/list:opacity-50 `}
+      >
+        <div className="absolute hidden z-0 -inset-4 lg:block rounded-sm transition group-hover:bg-slate-800/50 group-hover:drop-shadow-lg lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
+        <div className="z-10 group-hover:text-highlight-100">
+          <h2 className="text-md font-semibold">{props.title}</h2>
+          <p className="text-sm group-hover:text-white">{props.description}</p>
+        </div>
+        <div className="flex flex-row gap-2 items-center justify-start">
+          {tags?.map((value) => (
+            <SkillTag tag={value} />
+          ))}
+        </div>
       </div>
-      <div className="flex flex-row gap-4 items-center justify-center">
-        {tags?.map((value) => (
-          <SkillTag tag={value} />
-        ))}
-      </div>
-    </div>
+    </li>
   );
 };
 

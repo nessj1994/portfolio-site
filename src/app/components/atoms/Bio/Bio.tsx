@@ -3,8 +3,8 @@ import Markdown from 'react-markdown';
 import bio from '@content/bio.md';
 import { useEffect, useState } from 'react';
 const Bio = () => {
-  let speed: number = 3;
-  let length: number = String(bio).length;
+  const speed: number = 3;
+  const length: number = String(bio).length;
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
@@ -19,11 +19,11 @@ const Bio = () => {
   }, [bio, speed]);
 
   return (
-
-        <div className={`text-wrap prose prose-sm text-white prose-invert w-full min-w-[60ch]`} >
-
-        <Markdown>{displayedText}</Markdown>
-      </div>
+    <div
+      className={`text-wrap prose prose-sm text-white prose-invert w-full min-w-[60ch]`}
+    >
+      <Markdown>{displayedText}</Markdown>
+    </div>
   );
 };
 

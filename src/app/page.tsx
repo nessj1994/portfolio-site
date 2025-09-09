@@ -12,19 +12,22 @@ import ResumeButton from './components/atoms/ResumeButton/ResumeButton';
 
 export default function Home() {
   return (
-    <div className="absolute min-h-screen min-w-full bg-gray-900 scroll-mt-5">
+    <div className="mx-auto min-h-screen max-w-screen bg-gray-900 scroll-mt-5 px-6">
       <CursorFollower />
-      <Navbar />
-      <div className="flex flex-col min-h-full">
+      {/* <Navbar /> */}
+      <div className="flex justify-evenly gap-12">
         <div
-          id="about-container"
-          className="flex flex-col md:flex-row h-screen justify-center md:justify-evenly mx-8 gap-32 items-center"
+          id="header"
+          className="flex flex-col max-h-screen top-0 sticky py-24"
         >
           <div
-            id="profile"
-            className="flex flex-col md:h-full items-center min-w-72 "
+            id="about-container"
+            className="flex flex-col md:flex-row h-screen justify-center md:justify-evenly mx-8 gap-32 items-center"
           >
-            <div className="justify-center flex flex-1 flex-col items-start gap-8">
+            <div
+              id="profile"
+              className="flex flex-col gap-8 md:h-full min-w-72 "
+            >
               <div>
                 <NameDisplay />
                 <TitleDisplay title={'Software Engineer'} />
@@ -51,22 +54,19 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col">
-            <Bio />
-            <ResumeButton />
-          </div>
         </div>
-        <div id="projects" className="relative flex flex-col min-h-screen">
-          <div className="absolute inset-0 flex-1  min-h-screen bg-gray-950 opacity-60 z-1" />
-          <div className="relative mt-14 mx-8 flex flex-col gap-10 z-2">
-            <span className="text-white text-5xl font-bold">Projects</span>
+        <div id="main" className="flex flex-col py-24">
+          <Bio />
+          <ResumeButton />
+          {/* <div id="projects" className=" flex flex-col ">
+              <div className=" mt-14 mx-8 flex flex-col gap-10 z-2"> */}
+          <div className="flex flex-col gap-4">
+            <span className="text-white text-2xl font-bold">Projects</span>
             <ProjectDisplay />
           </div>
-        </div>
-        <div id="contact" className="flex flex-col min-h-screen ">
-          <div className="relative mt-14 mx-8 flex flex-col gap-10 z-2">
-            <span className="text-white text-5xl font-bold">Contact</span>
-          </div>
+          {/* </div>
+            </div> */}
+          {/* <span className="text-white text-5xl font-bold">Contact</span> */}
         </div>
       </div>
     </div>

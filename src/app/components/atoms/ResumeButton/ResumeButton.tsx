@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
 const ResumeButton = () => {
   return (
-    <div className="flex justify-center items-center mt-20 mx-auto bg-highlight-200 h-16 w-48 animate-bounce rounded-full">
+    <div className="flex justify-center items-center my-14 mx-auto bg-highlight-200 h-16 w-48 animate-bounce rounded-full">
       <button
         className="opacity-100"
         onClick={() => {

@@ -5,5 +5,12 @@
   "singleQuote": true,
   "trailingComma": "all",
   "bracketSpacing": true,
-  "overrides": [{ "files": "*.d.ts", "options": { "trailingComma": "es5" } }]
+  "overrides": [
+    {
+      "files": "*.d.ts",
+      "options": {
+        "trailingComma": "es5"
+      }
+    }
+  ]
 }
