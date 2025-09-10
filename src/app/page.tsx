@@ -12,21 +12,21 @@ import ResumeButton from './components/atoms/ResumeButton/ResumeButton';
 
 export default function Home() {
   return (
-    <div className="mx-auto min-h-screen max-w-screen bg-gray-900 scroll-mt-5 px-6">
+    <div className="md:mx-auto min-h-screen bg-gray-900 scroll-mt-5 md:px-6">
       <CursorFollower />
       {/* <Navbar /> */}
-      <div className="flex flex-col md:flex-row justify-evenly gap-12">
+      <div className="flex flex-col flex md:flex-row md:justify-evenly md:gap-12 w-screen">
         <div
           id="header"
           className="flex flex-col max-h-screen top-0 md:sticky py-12 md:py-24"
         >
           <div
             id="about-container"
-            className="flex flex-col md:flex-row md:h-screen  mx-8 gap-32 items-center"
+            className="flex flex-col md:flex-row md:h-screen  md:mx-8 gap-32 md:items-center"
           >
             <div
               id="profile"
-              className="flex flex-col justify-center md:h-full min-w-72 "
+              className="flex grow flex-col md:h-full min-w-72 "
             >
               <div className="flex flex-col self-start">
                 <NameDisplay />
@@ -38,7 +38,7 @@ export default function Home() {
               </div>
               <div
                 id="avatar-container"
-                className="justify-center hidden md:flex flex-col mx-auto "
+                className="justify-center self-center hidden md:flex flex-col flex-1 grow mx-auto"
               >
                 <Image
                   src="/images/avatar.jpg"
@@ -49,10 +49,7 @@ export default function Home() {
                   height={400}
                 />
               </div>
-              <div
-                id="social-container"
-                className="w-full mt-16 self-end flex "
-              >
+              <div id="social-container" className="w-full mt-16 self-end flex">
                 <SocialPanel />
               </div>
             </div>

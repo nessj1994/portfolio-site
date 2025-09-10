@@ -24,7 +24,7 @@ const Bio = () => {
 
   return (
     <div
-      className={`text-wrap prose prose-sm text-slate-300 prose-invert w-full min-w-[60ch]`}
+      className={`text-wrap prose prose-sm text-slate-300 prose-invert w-full `}
     >
       <Markdown components={{ strong: HighlightStrong }}>
         {displayedText}

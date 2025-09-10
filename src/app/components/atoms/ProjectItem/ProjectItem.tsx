@@ -14,7 +14,7 @@ const ProjectItem = (props: Project) => {
           <h2 className="text-md font-semibold">{props.title}</h2>
           <p className="text-sm text-slate-300">{props.description}</p>
         </div>
-        <div className="flex flex-row gap-2 items-center justify-start">
+        <div className="flex flex-row flex-wrap gap-2 items-center justify-start">
           {tags?.map((value) => (
             <SkillTag tag={value} />
           ))}
