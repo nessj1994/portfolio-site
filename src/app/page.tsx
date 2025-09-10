@@ -15,7 +15,7 @@ export default function Home() {
     <div className="md:mx-auto min-h-screen bg-gray-900 scroll-mt-5 md:px-6">
       <CursorFollower />
       {/* <Navbar /> */}
-      <div className="flex flex-col flex md:flex-row md:justify-evenly md:gap-12 w-screen">
+      <div className="flex flex-col mx-6 md:flex-row md:justify-evenly md:gap-12 ">
         <div
           id="header"
           className="flex flex-col max-h-screen top-0 md:sticky py-12 md:py-24"
