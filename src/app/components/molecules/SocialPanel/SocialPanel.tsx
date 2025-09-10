@@ -16,7 +16,7 @@ const emailIcon: IconProp = 'fa-solid fa-envelope';
 
 const SocialPanel = () => {
   return (
-    <div className="self-end flex-1 h-full flex flex-row gap-5 justify-center items-end">
+    <div className="lg:self-end flex-1 h-full flex flex-row gap-5 justify-center items-center">
       <SocialLink id={0} socialID="GitHub" icon={ghIcon} />
       <SocialLink id={0} socialID="LinkedIn" icon={linkedInIcon} />
       <SocialLink id={0} socialID="Email" icon={emailIcon} />

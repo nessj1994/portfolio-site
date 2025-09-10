@@ -12,21 +12,21 @@ import ResumeButton from './components/atoms/ResumeButton/ResumeButton';
 
 export default function Home() {
   return (
-    <div className="md:mx-auto min-h-screen bg-gray-900 scroll-mt-5 md:px-6">
+    <div className="lg:mx-auto min-h-screen bg-gray-900 scroll-mt-5 lg:px-6">
       <CursorFollower />
       {/* <Navbar /> */}
-      <div className="flex flex-col mx-6 md:flex-row md:justify-evenly md:gap-12 ">
+      <div className="flex flex-col mx-6 lg:flex-row lg:justify-evenly lg:gap-12 ">
         <div
           id="header"
-          className="flex flex-col max-h-screen top-0 md:sticky py-12 md:py-24"
+          className="flex flex-col max-h-screen  top-0 lg:sticky pt-12 lg:py-24"
         >
           <div
             id="about-container"
-            className="flex flex-col md:flex-row md:h-screen  md:mx-8 gap-32 md:items-center"
+            className="flex flex-col lg:flex-row lg:h-screen  lg:mx-8 gap-32 lg:items-center"
           >
             <div
               id="profile"
-              className="flex grow flex-col md:h-full min-w-72 "
+              className="flex grow flex-col lg:h-full min-w-72 "
             >
               <div className="flex flex-col self-start">
                 <NameDisplay />
@@ -38,24 +38,27 @@ export default function Home() {
               </div>
               <div
                 id="avatar-container"
-                className="justify-center self-center hidden md:flex flex-col flex-1 grow mx-auto"
+                className="justify-center self-center hidden lg:flex flex-col flex-1 grow mx-auto"
               >
                 <Image
                   src="/images/avatar.jpg"
                   alt="Jordan Ness"
                   sizes="auto"
-                  className="rounded-full shadow-md hidden md:flex"
+                  className="rounded-full shadow-md hidden lg:flex"
                   width={400}
                   height={400}
                 />
               </div>
-              <div id="social-container" className="w-full mt-16 self-end flex">
+              <div
+                id="social-container"
+                className="w-full mt-12 lg:mt-16 self-end flex"
+              >
                 <SocialPanel />
               </div>
             </div>
           </div>
         </div>
-        <div id="main" className="flex flex-col md:py-24">
+        <div id="main" className="flex flex-col lg:py-24">
           <Bio />
           <ResumeButton />
           {/* <div id="projects" className=" flex flex-col ">

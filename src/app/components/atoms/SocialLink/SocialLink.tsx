@@ -13,15 +13,13 @@ type SocialLinkProps = {
 };
 const SocialLink = (props: SocialLinkProps) => {
   const { id, socialID, url = '', icon } = props;
-  const trueURL = url
-    ? url
-    : process.env[`${socialID.toUpperCase()}_URL`];
+  const trueURL = url ? url : process.env[`${socialID.toUpperCase()}_URL`];
   return (
     <div className="flex items-center min-h-[32px]">
       <a href={trueURL}>
         <FontAwesomeIcon
           icon={icon}
-          className="text-3xl  hover:text-highlight-200"
+          className="text-3xl hover:text-highlight-200"
           href={trueURL}
         />
       </a>

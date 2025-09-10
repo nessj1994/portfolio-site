@@ -24,11 +24,16 @@ const Bio = () => {
 
   return (
     <div
-      className={`text-wrap prose prose-sm text-slate-300 prose-invert w-full `}
+      className={`text-wrap prose prose-sm text-slate-300 prose-invert w-full grid`}
     >
-      <Markdown components={{ strong: HighlightStrong }}>
-        {displayedText}
-      </Markdown>
+      <div className="z-0 opacity-0 col-start-1 row-start-1">
+        <Markdown>{bio}</Markdown>
+      </div>
+      <div className={'z-10  col-start-1 row-start-1'}>
+        <Markdown components={{ strong: HighlightStrong }}>
+          {displayedText}
+        </Markdown>
+      </div>
     </div>
   );
 };
