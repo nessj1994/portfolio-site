@@ -7,6 +7,10 @@ const Bio = () => {
   const length: number = String(bio).length;
   const [displayedText, setDisplayedText] = useState('');
 
+  const HighlightStrong = ({ node, ...props }) => (
+    <strong style={{ color: 'white' }} {...props} />
+  );
+
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -20,9 +24,11 @@ const Bio = () => {
 
   return (
     <div
-      className={`text-wrap prose prose-sm text-white prose-invert w-full min-w-[60ch]`}
+      className={`text-wrap prose prose-sm text-slate-300 prose-invert w-full min-w-[60ch]`}
     >
-      <Markdown>{displayedText}</Markdown>
+      <Markdown components={{ strong: HighlightStrong }}>
+        {displayedText}
+      </Markdown>
     </div>
   );
 };

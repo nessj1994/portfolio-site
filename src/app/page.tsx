@@ -15,27 +15,27 @@ export default function Home() {
     <div className="mx-auto min-h-screen max-w-screen bg-gray-900 scroll-mt-5 px-6">
       <CursorFollower />
       {/* <Navbar /> */}
-      <div className="flex justify-evenly gap-12">
+      <div className="flex flex-col md:flex-row justify-evenly gap-12">
         <div
           id="header"
-          className="flex flex-col max-h-screen top-0 sticky py-24"
+          className="flex flex-col max-h-screen top-0 md:sticky py-12 md:py-24"
         >
           <div
             id="about-container"
-            className="flex flex-col md:flex-row h-screen justify-center md:justify-evenly mx-8 gap-32 items-center"
+            className="flex flex-col md:flex-row md:h-screen  mx-8 gap-32 items-center"
           >
             <div
               id="profile"
-              className="flex flex-col gap-8 md:h-full min-w-72 "
+              className="flex flex-col justify-center md:h-full min-w-72 "
             >
-              <div>
+              <div className="flex flex-col self-start">
                 <NameDisplay />
                 <TitleDisplay title={'Software Engineer'} />
+                <span className="text-wrap max-w-md text-sm text-slate-300">
+                  A full stack engineer with a passion for bringing ideas to
+                  life on screen with clean scalable code
+                </span>
               </div>
-              <span className="text-wrap max-w-md">
-                A full stack engineer with a passion for bringing ideas to life
-                on screen with clean scalable code
-              </span>
               <div
                 id="avatar-container"
                 className="justify-center hidden md:flex flex-col mx-auto "
@@ -49,13 +49,16 @@ export default function Home() {
                   height={400}
                 />
               </div>
-              <div id="social-container" className="w-full mt-16 ">
+              <div
+                id="social-container"
+                className="w-full mt-16 self-end flex "
+              >
                 <SocialPanel />
               </div>
             </div>
           </div>
         </div>
-        <div id="main" className="flex flex-col py-24">
+        <div id="main" className="flex flex-col md:py-24">
           <Bio />
           <ResumeButton />
           {/* <div id="projects" className=" flex flex-col ">
