@@ -39,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth w-screen ">
+    <html
+      lang="en"
+      className="scroll-smooth w-screen max-w-screen overflow-x-hidden"
+    >
       <body
         // className={`${monteserrat.variable} antialiased`}
         className={`${monteserrat.className} antialiased`}
